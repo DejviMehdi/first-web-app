@@ -1,14 +1,10 @@
-const fastify = require('fastify')({
-    logger:true
-})
+const{build} = require('./app')
 
-fastify.get('/',function(request,reply){
-    reply.send({hello:'world'})
-})
+const app = build({logger:true})
 
-fastify.listen(3000,function(err,address){
+app.listen(3000,function(err, address){
     if(err){
-        fastify.log.error(err)
+        app.log.error(err)
         process.exit(1)
     }
 })
