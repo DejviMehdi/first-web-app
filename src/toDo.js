@@ -1,4 +1,4 @@
-let items = [
+let toDo = [
 
     {id:'1', name:'Item1', description:'Item 1 description'},
 
@@ -7,4 +7,4 @@ let items = [
     {id:'3', name:'Item3', description:'Item 3 description'},
 
    ]
-    module.exports = items;
+    module.exports = toDo;

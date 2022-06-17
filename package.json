@@ -1,19 +1,20 @@
 {
- "name":"first-web-app",
- "version":"1.0.0",
+ "name": "first-web-app",
+ "version": "1.0.0",
  "description": "",
- "main":"index.js",
-
+ "main": "index.js",
  "scripts": {
-   "dev":"nodemon src/server.js",
-   "test":"echo \"Error: no test specified\" && exit 1"
+  "dev": "nodemon src/server.js",
+  "test": "echo \"Error: no test specified\" && exit 1"
  },
  "author": "",
- "license":"ISC",
- "devDependencies":{
-   "nodemon": "^2.0.16"
+ "license": "ISC",
+ "devDependencies": {
+  "nodemon": "^2.0.16"
  },
- "dependencies":{
-  "fastify":"^4.0.2"
-  }
+ "dependencies": {
+  "@fastify/swagger": "^7.3.0",
+  "fastify": "^4.0.2",
+  "fastify-swagger": "^5.2.0"
+ }
 }

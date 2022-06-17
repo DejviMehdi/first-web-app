@@ -3,3 +3,26 @@ GET http://127.0.0.1:3000 HTTP/1.1
 
 ### GET SINGLE ITEMS BY ID
 GET http://127.0.0.1:3000/1 HTTP/1.1
+
+### Add item
+POST http://localhost:3000/ HTTP/1.1
+Content-Type:application/json
+
+{
+    "name":"New Item",
+    "description":"New Item Description"
+}
+
+### Remove SINGLE ITEMS 
+DELETE  http://127.0.0.1:3000/8 HTTP/1.1
+
+### Update item
+PUT http://127.0.0.1:3000/3 HTTP/1.1 
+Content-Type:application/json
+
+{
+    "name":"New Item ",
+    "description":"New Item Description"
+}
+
+
