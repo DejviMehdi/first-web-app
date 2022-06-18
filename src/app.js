@@ -1,12 +1,17 @@
-const fastify = require('fastify')
-const fastifySwagger=require('@fastify/swagger')
+const fastify = require("fastify");
+const fastifySwagger = require("@fastify/swagger");
+const fastifyPostgres = require("@fastify/postgres");
 
-const {itemRoute} =require('./routes/toDo')
+const { todoRoute } = require("./routes/v1/todo");
+const { todoRoute_v2 } = require("./routes/v2/todo");
 
-const build=(opts={}, optsSwagger={})=>{
-    const app=fastify(opts)
-    app.register(fastifySwagger, optsSwagger)
-    app.register(itemRoute)
-    return app
-}
-module.exports={build}
+const build = (opts = {}, optSwagger = {}, optPostgres = {}) => {
+  const app = fastify(opts);
+  app.register(fastifyPostgres, optPostgres);
+  app.register(fastifySwagger, optSwagger);
+  app.register(todoRoute, { prefix: "/v1" });
+  app.register(todoRoute_v2, { prefix: "/v2" });
+  return app;
+};
+
+module.exports = { build };

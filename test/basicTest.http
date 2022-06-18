@@ -14,7 +14,7 @@ Content-Type:application/json
 }
 
 ### Remove SINGLE ITEMS 
-DELETE  http://127.0.0.1:3000/8 HTTP/1.1
+DELETE  http://127.0.0.1:3000/2 HTTP/1.1
 
 ### Update item
 PUT http://127.0.0.1:3000/3 HTTP/1.1 
